@@ -82,7 +82,7 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
-    # TODO 2: Implement the user login.
+    # TODO 2: Implement the user login...
 
     error = None
     if request.method == 'POST':
