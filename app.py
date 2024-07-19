@@ -93,7 +93,7 @@ def login():
         elif not password:
             flash('Password is required!')
         else:
-            # connect to database
+            # connect to database head-on
             conn = sqlite3.connect('database.db', timeout=60)
             c = conn.cursor()
             c.execute("SELECT * FROM users WHERE username = :user AND password = :pass",
