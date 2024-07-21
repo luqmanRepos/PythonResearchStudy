@@ -17,14 +17,12 @@ class User(UserMixin):
         self.username = username
         self.password = password
 
-
 class Website:
     def __init__(self, id, user_id, name, url):
         self.id = id
         self.user_id = user_id
         self.url = url
         self.name = name
-
 
 def get_user_by_id(user_id):
     conn = sqlite3.connect('database.db')
@@ -37,8 +35,7 @@ def get_user_by_id(user_id):
     else:
         return None
 
-
-# Callback to reload the user object
+# Callback to reload the user object headon
 @login_manager.user_loader
 def load_user(user_id):
     return get_user_by_id(user_id)
