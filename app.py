@@ -10,7 +10,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 app.app_context().push()
 
-Follow the sequence 
+# Follow the sequence 
 class User(UserMixin):
     def __init__(self, id, username, password):
         self.id = id
