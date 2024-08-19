@@ -11,7 +11,7 @@ login_manager.init_app(app)
 app.app_context().push()
 
 # Follow the sequence 
-class User(UserMixin):
+class User(UserMixinn):
     def __init__(self, id, username, password):
         self.id = id
         self.username = username
